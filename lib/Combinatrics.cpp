@@ -1,24 +1,41 @@
-LL powmod(LL a, LL e) {
-  ll sum = 1;
-  ll cur = a;
-  while (e > 0) {
-    if (e % 2) {
-      sum = sum * cur % mod;
-    }
-    cur = cur * cur % mod;
-    e /= 2;
+
+#define MOD 1000000007
+#define FACT_MAX 1000000
+
+LL fact[FACT_MAX];
+
+class Combinatrics{
+private:
+  long long mod = MOD;
+  int fact_max = FACT_MAX;
+public:
+  Combinatrics(){
+    fact[0]=1;
+    for(int i=1;i<fact_max;i++)
+      fact[i] = (fact[i-1]*i)%mod;
   }
-  return sum;
-}
-void add(ll &x, ll y) {
-  x = (x + y) % mod;
-}
- 
-const int N;
-LL fac[N], invfac[N];
-void init(void) {
-  fac[0] = 1;
-  FOR(i, 1, N) fac[i] = fac[i - 1] * i % mod;
-  invfac[N - 1] = powmod(fac[N - 1], mod - 2);
-  for (int i = N - 2; i >= 0; --i) invfac[i] = invfac[i + 1] * (i + 1) % mod;
-}
+  
+  long long power(long long n, long long e){
+    long long ret = 1;
+    long long b = n;
+    while(e){
+      if(e%2!=0)
+	ret*=b;
+      ret%=mod;
+      b*=b;
+      b%=mod;
+      e/=2;
+    }
+    return ret;
+  }
+
+  long long inv(long long n){
+    return power(n,mod-2);
+  }
+  
+  long long nck(int n,int k){
+    if(k>n || k<0) return 0;
+    if(k==n || k==0) return 1;
+    return (fact[n]*inv(fact[n-k])%mod)*inv(fact[k])%mod;
+  }
+};

@@ -6,14 +6,14 @@
 using namespace std;
 
 template <typename T>
-long long Clossing(std::vector<T> v, bool(*gt)(T,T)){
+long long Clossing(const std::vector<T> &v, bool(*gt)(T,T)){
   long long v_len=(long long)v.size();
   if(v_len>1){
     long long v1_len = v_len/2;
     long long v2_len = v_len-v1_len;
-    std::vector<T> v1,v2;
-    copy(v.begin(), v.begin()+v1_len, back_inserter(v1));
-    copy(v.begin()+v1_len, v.end(), back_inserter(v2));
+    std::vector<T> v1(v1_len,0),v2(v2_len,0);
+    copy(v.begin(), v.begin()+v1_len, v1.begin());
+    copy(v.begin()+v1_len, v.end(), v2.begin());
     long long ret1=Clossing(v1,gt);
     std::sort(v1.begin(),v1.end(),gt);
     long long ret2=Clossing(v2,gt);
@@ -41,6 +41,7 @@ long long Clossing(std::vector<T> v, bool(*gt)(T,T)){
   --------demo--------
  */
 
+
 bool gt(long long l1,long long l2){
   return l1<l2;
 }
@@ -53,6 +54,7 @@ bool gte(long long l1,long long l2){
 int main(){
   std::vector<long long>v;
   int n;
+  /*
   cin>>n;
   long long a;
   for(int i=0;i<n;i++){
@@ -61,10 +63,10 @@ int main(){
   }
   cout<<"gt:"<<Clossing(v,gt)<<endl;
   cout<<"gte:"<<Clossing(v,gte)<<endl;
-
+  */
   std::vector<long long>v_big;
-  for(int i=0;i<100000;i++){
-    v_big.push_back(1000000-i);
+  for(int i=0;i<500000;i++){
+    v_big.push_back(500000-i);
   }
   cout<<"gt:"<<Clossing(v_big,gt)<<endl;
   return 0;

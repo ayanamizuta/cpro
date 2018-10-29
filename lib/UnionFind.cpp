@@ -1,4 +1,4 @@
-
+#include <vector>
 class UnionFind{
 private:
   std::vector<int> par;
