@@ -8,7 +8,7 @@ using namespace std;
 string s;
 int k,n;
 
-int dp[300][300][300];
+int dp[300][300][301];
 
 int main(){
   cin>>s>>k;
@@ -26,7 +26,7 @@ int main(){
 	  if(s[init]==s[init+d-1]){
 	    dp[init][init+d-1][l]=(d==2)?2:2+dp[init+1][init+d-2][l];
 	  }else{
-	    dp[init][init+d-1][l]=max(max(dp[init][init+d-2][l],dp[init+1][init+d-1][l]),2+dp[init+1][init+d-2][l-1]);
+	    dp[init][init+d-1][l]=(d==2)?2:max(max(dp[init][init+d-2][l],dp[init+1][init+d-1][l]),2+dp[init+1][init+d-2][l-1]);
 	  }
 	}
       }

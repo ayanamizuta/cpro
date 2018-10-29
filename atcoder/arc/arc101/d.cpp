@@ -9,7 +9,7 @@ int n;
 vector<LL> v,v_sorted;
 
 template <typename T>
-long long Clossing(std::vector<T> v, bool(*gt)(T,T)){
+long long Clossing(std::vector<T> &v, bool(*gt)(T,T)){
   long long v_len=(long long)v.size();
   if(v_len>1){
     long long v1_len = v_len/2;
