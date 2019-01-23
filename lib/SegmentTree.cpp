@@ -1,85 +1,150 @@
 #include <functional>
 using namespace std;
 
-template <typename T>
+// SegmentTree
+// updating with max (long long)
+const int MAXSEGN = 100010;
 class SegmentTree{
-  
-  std::vector<T> segtree;
-  std::function<T(T,T)> upd;
-  int depth=0; // the depth of thetree
+public:
+  int size=0;
+  int depth=0; // the depth of the tree
   int best=0;  // the index of maximum element
-  int start=0; // the index of start point of additional elements
+  int start=0; // the initial index of inputs
+  long long dat[4 * MAXSEGN];
   
-  SegmentTree(std::vector<T> v, T(*upd_in)(T,T)){
-    upd = upd_in;
-    for(int i=0;i<v.size();i++)
-      segtree.push_back(v[i]);
-    while((1<<depth)<v.size()){
-      depth++;
-    }
+  SegmentTree(int n,T* v){
+    size=n;
+    while((1<<depth)<n)depth++;
     start=(1<<depth)-1;
-    REP(i,1<<(depth+1)){
-      if(i<start)
-	segt[i]=0;
-      else if(i<start+n)
-	segt[i]=input[i-start];
+    for(int i=start;i<(1<<(depth+1));i++){
+      if(i<start+n)
+	dat[i]=v[i-start];
       else
-	segt[i]=-INT_MAX;
+	dat[i]=-1e15;
     }
-    FOR(i,start,start+n){
-    int tmp=i;
-    while(par(tmp)!=-1){
-      segt[par(tmp)]=max(segt[tmp],segt[(tmp+1)/2*4-1-tmp]);
-      tmp=par(tmp);
-    }
+    for(int i=start;i<start+n;i++){
+      int tmp=i;
+      while(par(tmp)!=-1){
+	dat[par(tmp)]=max(dat[tmp],dat[(tmp+1)/2*4-1-tmp]);
+	tmp=par(tmp);
+      }
     }
     int i=0;
-    while(i<start){
-      i=(segt[i]==segt[2*i+1])?2*i+1:2*i+2;
-    }
+    while(i<start)i=(dat[i]==dat[2*i+1])?2*i+1:2*i+2;
     best=i-start;
   }
 
-  public int par(int i){
+  int par(int i){
     if(i==0)
       return -1;
     return (i-1)/2;
   }
 
-  public void update(int d,T x){
+  void update(int d,long long x){
     int i=d+start;
-    segt[i]=x;
+    dat[i]=x;
     while(par(i)!=-1){
-      segt[par(i)]=max(segt[i],segt[(i+1)/2*4-1-i]);
+      dat[par(i)]=max(dat[i],dat[(i+1)/2*4-1-i]);
       i=par(i);
     }
     i=0;
     while(i<start){
-      i=(segt[i]==segt[2*i+1])?2*i+1:2*i+2;
+      i=(dat[i]==dat[2*i+1])?2*i+1:2*i+2;
     }
     best=i-start;
   }
 
-  public T max_element(){
-    return segtree[best];
+  long long max_element(){
+    return dat[best];
   }
   
-}
+};
 
-//max segt
-//segt[best]->max value
-
-
-void update(int d,int x){
-  int i=d+start;
-  segt[i]=x;
-  while(par(i)!=-1){
-    segt[par(i)]=max(segt[i],segt[(i+1)/2*4-1-i]);
-    i=par(i);
+//StarrySky Tree
+// intarval update & max
+const int MAXSSTN = 100010;
+class StarrySkyTree{
+public:
+  int size=0;
+  int depth=0; // the depth of the tree
+  int best=0;  // the index of maximum element
+  int start=0; // the initial index of inputs
+  long long dat_add[4 * MAXSSTN];
+  long long dat[4 * MAXSSTN];
+  
+  StarrySkyTree(int n,long long* v){
+    size=n;
+    while((1<<depth)<n)depth++;
+    start=(1<<depth)-1;
+    for(int i=start;i<(1<<(depth+1));i++){
+      if(i<start+n)
+	dat[i]=v[i-start];
+      else
+	dat[i]=-1e15;
+    }
+    for(int i=start;i<start+n;i++){
+      int tmp=i;
+      while(par(tmp)!=-1){
+	dat[par(tmp)]=max(dat[tmp],dat[(tmp+1)/2*4-1-tmp]);
+	tmp=par(tmp);
+      }
+    }
+    int i=0;
+    while(i<start)i=(dat[i]==dat[2*i+1])?2*i+1:2*i+2;
+    best=i-start;
   }
-  i=0;
-  while(i<start){
-    i=(segt[i]==segt[2*i+1])?2*i+1:2*i+2;
+  long long max_element(int a, int b){ return max_element(a, b, 0, 0, (1<<depth)); }
+  void add(int s, int t, int x){ add(s, t, 0, 0, (1<<depth), x); }
+  void add(int i, int x){ add(i, i + 1, 0, 0, (1<<depth), x); }
+
+  int par(int i){
+    if(i==0)
+      return -1;
+    return (i-1)/2;
   }
-  best=i-start;
+
+  void update(int d,long long x){
+    int i=d+start;
+    dat[i]=x;
+    while(par(i)!=-1){
+      dat[par(i)]=max(dat[i],dat[(i+1)/2*4-1-i]);
+      i=par(i);
+    }
+    i=0;
+    while(i<start){
+      i=(dat[i]==dat[2*i+1])?2*i+1:2*i+2;
+    }
+    best=i-start;
+  }
+  void dump(){
+    for(int i=0;i<(1<<(depth+1));i++){
+      cerr<<dat[i]<<" ";
+    }
+    cerr<<endl;
+  }
+private:
+  long long max_element(int a, int b, int k, int l, int r){
+    if(b <= l || r <= a) return -1e15;
+    if(a <= l && r <= b) return dat[k] + dat_add[k];
+
+    long long vl = max_element(a, b, k * 2+1, l, (l + r) / 2);
+    long long vr = max_element(a, b, k * 2+2, (l + r) / 2, r);
+    return max(vl, vr) + dat_add[k];
+  }
+  void add(int a, int b, int k, int l, int r, long long x){
+    if(b <= l || r <= a) return;
+    if(a <= l && r <= b){
+      dat_add[k] += x;
+    }else{
+      add(a, b, k * 2+1, l, (l + r) / 2, x);
+      add(a, b, k * 2+2, (l + r) / 2, r, x);
+      dat[k] = max(dat[k * 2+1] + dat_add[k * 2+1], dat[k * 2 + 2] + dat_add[k * 2 + 2]);
+    }
+  }
+};
+
+
+int main(){
+  
+  return 0;
 }
