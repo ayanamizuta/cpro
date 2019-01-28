@@ -121,6 +121,48 @@ bool graph::bipartite(const graph<T> &g){
   return bl;
 }
 
+template <const int VN=100000,const int VLN=18>
+class RootedTree{
+public:
+  int parent[VLN][VN];
+  int depth[VN];
+  RootedTree(vector<vector<int>> &G){
+    dfs(0,-1,0,G);
+    init();
+  }
+  void dfs(int v,int p,int d,vector<vector<int>> &G){
+    parent[0][v]=p;
+    depth[v]=d;
+    for(int i=0;i<G[v].size();i++){
+      if(G[v][i]!=p) dfs(G[v][i],v,d+1,G);
+    }
+  }
+
+  void init(){
+    for(int i=0;i+1<VLN;i++){
+      for(int k=0;k<VN;k++){
+	if(parent[i][k]<0)parent[i+1][k]=-1;
+	else parent[i+1][k] = parent[i][parent[i][k]];
+      }
+    }
+  }
+  
+  int lca(int x,int y){
+    if(depth[x]>depth[y])swap(x,y);
+    for(int i=0;i<VLN;i++){
+      if((depth[y]-depth[x])>>i & 1)y=parent[i][y];
+    }
+    if(x==y)return x;
+    for(int i=VLN-1;i>=0;i--){
+      if(parent[i][x]!=parent[i][y]){
+	x=parent[i][x];
+	y=parent[i][y];
+      }
+    }
+    return parent[0][x];
+  }
+};
+
 int main(){
   int n,m,a,b;
   cin>>n>>m;

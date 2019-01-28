@@ -2,6 +2,7 @@ import Control.Applicative
 import Text.Printf
 import Debug.Trace
 
+main :: IO ()
 main = do
   [hoge,fuga] <- fmap (read :: String -> Int) . words <$> getLine
   n <- readLn
