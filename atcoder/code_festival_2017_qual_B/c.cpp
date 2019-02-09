@@ -1,7 +1,10 @@
-#include <bits/stdc++.h>
- 
+#include "bits/stdc++.h"
 using namespace std;
- 
+
+#define FOR(i,a,b) for(int i=(a);i<(b);++i)
+#define REP(i,n)   FOR(i,0,n)
+#define LL long long
+
 template <typename T>
 class graph {
   public:
@@ -121,59 +124,22 @@ bool bipartite(graph<T> &g){
   return bl;
 }
 
-template <const int VN=100000,const int VLN=18>
-class RootedTree{
-public:
-  int parent[VLN][VN];
-  int depth[VN];
-  RootedTree(vector<vector<int>> &G){
-    dfs(0,-1,0,G);
-    init();
-  }
-  void dfs(int v,int p,int d,vector<vector<int>> &G){
-    parent[0][v]=p;
-    depth[v]=d;
-    for(int i=0;i<G[v].size();i++){
-      if(G[v][i]!=p) dfs(G[v][i],v,d+1,G);
-    }
-  }
-
-  void init(){
-    for(int i=0;i+1<VLN;i++){
-      for(int k=0;k<VN;k++){
-	if(parent[i][k]<0)parent[i+1][k]=-1;
-	else parent[i+1][k] = parent[i][parent[i][k]];
-      }
-    }
-  }
-  
-  int lca(int x,int y){
-    if(depth[x]>depth[y])swap(x,y);
-    for(int i=0;i<VLN;i++){
-      if((depth[y]-depth[x])>>i & 1)y=parent[i][y];
-    }
-    if(x==y)return x;
-    for(int i=VLN-1;i>=0;i--){
-      if(parent[i][x]!=parent[i][y]){
-	x=parent[i][x];
-	y=parent[i][y];
-      }
-    }
-    return parent[0][x];
-  }
-};
+LL n,m;
 
 int main(){
-  int n,m,a,b;
   cin>>n>>m;
-  undigraph<int> g(n);
-  for(int i=0;i<m;i++){
-    cin>>a>>b;
+  undigraph<int> g((int)n);
+  int a,b;
+  REP(i,m){
+    cin>>a>>b;a--;b--;
     g.add(a,b,1);
   }
-  bipartite(g);
-  for(int i=0;i<n;i++){
-    cerr<<g.visited[i]<<endl;
+  if(bipartite<int>(g)){
+    LL c=0;
+    REP(i,n)c+=g.visited[i]==1?1:0;
+    cout<<c*(n-c)-m<<endl;
+  }else{
+    cout<<n*(n-1)/2-m<<endl;
   }
   return 0;
 }

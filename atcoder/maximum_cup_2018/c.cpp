@@ -1,7 +1,10 @@
-#include <bits/stdc++.h>
- 
+#include "bits/stdc++.h"
 using namespace std;
- 
+
+#define FOR(i,a,b) for(int i=(a);i<(b);++i)
+#define REP(i,n)   FOR(i,0,n)
+#define LL long long
+
 template <typename T>
 class graph {
   public:
@@ -97,6 +100,10 @@ void WarshallFloyd(const undigraph<T> &g, int start) {
   }
 }
 
+int n;
+int a[100000];
+LL ret=0,tmp[2];
+
 template <typename T>
 bool bipartite_(graph<T> &g, int start, int color){
   if(g.visited[start]!=-1 && g.visited[start]==color)
@@ -104,6 +111,7 @@ bool bipartite_(graph<T> &g, int start, int color){
   if(g.visited[start]!=-1)
     return false;
   g.visited[start]=color;
+  tmp[color]++;
   bool ret=true;
   for(int i=0;i<g.g[start].size();i++){
     ret = ret & bipartite_(g,g.edges[g.g[start][i]].from ^ g.edges[g.g[start][i]].to ^ start,1-color);
@@ -116,64 +124,22 @@ bool bipartite(graph<T> &g){
   bool bl=true;
   for(int i=0;i<g.n;i++){
     if(g.visited[i]>=0)continue;
+    tmp[0]=0;tmp[1]=0;
     bl = bl & bipartite_(g,i,0);
+    ret+=max(tmp[0],tmp[1]);
   }
   return bl;
 }
 
-template <const int VN=100000,const int VLN=18>
-class RootedTree{
-public:
-  int parent[VLN][VN];
-  int depth[VN];
-  RootedTree(vector<vector<int>> &G){
-    dfs(0,-1,0,G);
-    init();
-  }
-  void dfs(int v,int p,int d,vector<vector<int>> &G){
-    parent[0][v]=p;
-    depth[v]=d;
-    for(int i=0;i<G[v].size();i++){
-      if(G[v][i]!=p) dfs(G[v][i],v,d+1,G);
-    }
-  }
-
-  void init(){
-    for(int i=0;i+1<VLN;i++){
-      for(int k=0;k<VN;k++){
-	if(parent[i][k]<0)parent[i+1][k]=-1;
-	else parent[i+1][k] = parent[i][parent[i][k]];
-      }
-    }
-  }
-  
-  int lca(int x,int y){
-    if(depth[x]>depth[y])swap(x,y);
-    for(int i=0;i<VLN;i++){
-      if((depth[y]-depth[x])>>i & 1)y=parent[i][y];
-    }
-    if(x==y)return x;
-    for(int i=VLN-1;i>=0;i--){
-      if(parent[i][x]!=parent[i][y]){
-	x=parent[i][x];
-	y=parent[i][y];
-      }
-    }
-    return parent[0][x];
-  }
-};
-
 int main(){
-  int n,m,a,b;
-  cin>>n>>m;
+  cin>>n;
   undigraph<int> g(n);
-  for(int i=0;i<m;i++){
-    cin>>a>>b;
-    g.add(a,b,1);
+  REP(i,n){
+    cin>>a[i];;a[i]--;
+    g.add(i,a[i]);
   }
-  bipartite(g);
-  for(int i=0;i<n;i++){
-    cerr<<g.visited[i]<<endl;
-  }
+  if(bipartite<int>(g)){
+    cout<<ret<<endl;
+  }else cout<<-1<<endl;
   return 0;
 }

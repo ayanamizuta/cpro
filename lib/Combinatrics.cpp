@@ -38,8 +38,8 @@ public:
   }
   
   long long nck(int n,int k){
-    if(k>n || k<0) return 0;
-    if(k==n || k==0) return 1;
+    if(k>n || k<0) return 0LL;
+    if(k==n || k==0) return 1LL;
     return (fact[n]*inv(fact[n-k])%mod)*inv(fact[k])%mod;
   }
 };

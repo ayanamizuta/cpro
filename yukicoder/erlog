@@ -1,0 +1,240 @@
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:170:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:170:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:443:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:443:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:1632:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:1632:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:1734:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:1734:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:2199:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:2199:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:2800:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:2800:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:2914:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:2914:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:2952:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:2952:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3084:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3084:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3122:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3122:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3384:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3384:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3458:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3458:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3528:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3528:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3674:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3674:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3826:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3826:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3871:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:3871:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4092:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4092:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4236:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4236:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4281:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4281:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4497:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4497:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4953:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:4953:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:5108:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:5108:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:5138:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:5138:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:5242:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:5242:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:6028:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:6028:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:6241:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:6241:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:6809:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:6809:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:6996:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:6996:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7175:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7175:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7400:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7400:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7622:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7622:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7718:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7718:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7929:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:7929:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8008:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8008:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8069:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8069:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8188:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8188:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8344:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8344:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8764:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:8764:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:9065:11: warning: section "__textcoal_nt" is deprecated
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~
+/var/folders/57/tmwz50c568sdcjb0kzrzkqh40000gn/T//ccT35P6X.s:9065:11: note: change section name to "__text"
+        .section __TEXT,__textcoal_nt,coalesced,pure_instructions
+                 ^      ~~~~~~~~~~~~~

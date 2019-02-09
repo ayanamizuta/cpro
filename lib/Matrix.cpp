@@ -43,8 +43,10 @@ std::vector<T> Gauss_Jordan(const std::vector<vector<T>> &A,const std::vector<T>
 
 //O(n^3)
 //implementation from the antbook
+// not verified!
 #define BITN 200
 bitset<BITN> Gauss_Jordan_bit(const std::vector<std::bitset<BITN>> &A,const std::bitset<BITN> &b){
+  int n = a.size();
   vector<int> where (m, -1);
   for (int col=0, row=0; col<m && row<n; ++col) {
     for (int i=row; i<n; ++i)
