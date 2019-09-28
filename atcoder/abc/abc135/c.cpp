@@ -6,17 +6,21 @@ using namespace std;
 #define ALL(a)  (a).begin(),(a).end()
 #define LL long long
 int n;
-int a[100000];
-int v[100000];
+LL a[100001];
+LL b[100000];
 
 int main(){
-  cin >> n;
-  REP(i,n)cin>>a[i];
-  REP(i,n)v[a[i]-1]=i+1;
+  LL ret=0;
+  cin>>n;
+  REP(i,n+1)cin>>a[i];
+  REP(i,n)cin>>b[i];
+
   REP(i,n){
-    if(i==n-1)cout<<v[i];
-    else cout<<v[i]<<" ";
+    LL tmp=min(b[i],a[i]+a[i+1]);
+    ret+=tmp;
+    a[i+1]-=max(0LL,tmp-a[i]);
   }
-  cout<<endl;
+
+  cout<<ret<<endl;
   return 0;
 }

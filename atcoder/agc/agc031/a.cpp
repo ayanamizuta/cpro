@@ -5,18 +5,22 @@ using namespace std;
 #define REP(i,n)   FOR(i,0,n)
 #define ALL(a)  (a).begin(),(a).end()
 #define LL long long
+
+string s;
 int n;
-int a[100000];
-int v[100000];
+LL cnt[26];
+LL mod = 1000000007;
 
 int main(){
-  cin >> n;
-  REP(i,n)cin>>a[i];
-  REP(i,n)v[a[i]-1]=i+1;
+  cin>>n;
+  cin>>s;
   REP(i,n){
-    if(i==n-1)cout<<v[i];
-    else cout<<v[i]<<" ";
+    cnt[(int)(s[i]-'a')]++;
   }
-  cout<<endl;
+  LL ret=1LL;
+  REP(i,26){
+    ret=(ret*(1+cnt[i]))%mod;
+  }
+  cout<<(ret-1)<<endl;
   return 0;
 }
