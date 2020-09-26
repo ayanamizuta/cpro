@@ -1,7 +1,6 @@
-// C++ includes used for precompiling -*- C++ -*-
+// includes used for precompiling -*- C++ -*-
 
-// Copyright (C) 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010
-// Free Software Foundation, Inc.
+// Copyright (C) 2003-2014 Free Software Foundation, Inc.
 //
 // This file is part of the GNU ISO C++ Library.  This library is free
 // software; you can redistribute it and/or modify it under the
@@ -20,14 +19,14 @@
 
 // You should have received a copy of the GNU General Public License and
 // a copy of the GCC Runtime Library Exception along with this program;
-// see the files COPYINGand COPYING.RUNTIME respectively.  If not, see
+// see the files COPYING3 and COPYING.RUNTIME respectively.  If not, see
 // <http://www.gnu.org/licenses/>.
 
 /** @file stdc++.h
  *  This is an implementation file for a precompiled header.
  */
 
-// 17.4.1.Headers
+// 17.4.1.2 Headers
 
 // C
 #ifndef _GLIBCXX_NO_ASSERT
@@ -49,10 +48,11 @@
 #include <cstring>
 #include <ctime>
 
-#ifdef __GXX_EXPERIMENTAL_CXX0X__
+#if __cplusplus >= 201103L
 #include <ccomplex>
 #include <cfenv>
 #include <cinttypes>
+#include <cstdalign>
 #include <cstdbool>
 #include <cstdint>
 #include <ctgmath>
@@ -94,7 +94,7 @@
 #include <valarray>
 #include <vector>
 
-//#ifdef __GXX_EXPERIMENTAL_CXX0X__
+#if __cplusplus >= 201103L
 #include <array>
 #include <atomic>
 #include <chrono>
@@ -106,6 +106,7 @@
 #include <random>
 #include <ratio>
 #include <regex>
+#include <scoped_allocator>
 #include <system_error>
 #include <thread>
 #include <tuple>
@@ -113,4 +114,4 @@
 #include <type_traits>
 #include <unordered_map>
 #include <unordered_set>
-//#endif
+#endif
