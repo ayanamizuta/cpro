@@ -1,0 +1,11 @@
+n=int(input())
+a=list(map(int,input().split()))
+a.sort(reverse=True)
+ret=0
+ret=max(ret,int(str(a[0])+str(a[1])+str(a[2])))
+ret=max(ret,int(str(a[0])+str(a[2])+str(a[1])))
+ret=max(ret,int(str(a[1])+str(a[0])+str(a[2])))
+ret=max(ret,int(str(a[1])+str(a[2])+str(a[0])))
+ret=max(ret,int(str(a[2])+str(a[0])+str(a[1])))
+ret=max(ret,int(str(a[2])+str(a[1])+str(a[0])))
+print(ret)
